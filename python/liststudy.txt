@@ -1,0 +1,36 @@
+'''
+    # 문제 #
+    쇼핑몰 데이터 리스트에서 정보를 알고자 한다. 
+    나이를 입력하여 이에 해당하는 색깔을 원하면 1번 
+    이름을 입력하여 이에 해당하는 색깔을 원하면 2번을 입력한다.
+'''
+
+ccCollect = [[["자켓"],["김수연","김현경","이융희"],[30,26,23],["회색","갈색","검정색"]],
+             [["니트"],["조두환","서동호","임동원"],[25,31,27],["흰색","노란색","파랑색"]]]
+
+num = int(input("몇 번 반복? "))
+rep = 0
+while rep < num:
+    findValue = int(input("색깔 찾고자 하는 것 : 나이일 경우 1을 입력, 이름일 경우 2를 입력"))
+    if(findValue == 1):
+        findAge = input("원하는 나이는? ")
+        if findAge in str(ccCollect):
+            for i in range(len(ccCollect)):  
+                for a in range(len(ccCollect[i][2])):
+                    if(ccCollect[i][2][a] == int(findAge)):
+                        print(ccCollect[i][3][a])            
+        else:
+            print("해당 나이는 없습니다.")
+            
+    elif(findValue == 2):
+        findName = input("원하는 사람 이름은?  ")
+        if findName in str(ccCollect):
+            for i in range(len(ccCollect)):  
+                for n in range(len(ccCollect[i][1])):
+                    if(ccCollect[i][1][n]== findName):
+                        print(ccCollect[i][3][n])
+        else:
+            print("해당 이름은 없습니다.")
+    else:
+        print("다시 입력해주세요")
+    rep +=1
