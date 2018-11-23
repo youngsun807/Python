@@ -1,4 +1,4 @@
-# Q1. 답지
+# Q1. 
 # https://docs.python.org/3.5/library/datetime.html?highlight=datetime#module-datetime
 import datetime
 
@@ -29,7 +29,7 @@ print(data + '요일')
 
 
 
-# Q2. 답지
+# Q2. 
 word = "abc    ABC AbC abC   "
 delSpace = word.rstrip().replace(" ","")
 for i in delSpace:
